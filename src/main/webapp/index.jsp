@@ -29,7 +29,7 @@
 			<div><%= s.getNumber() %></div>
 			<div><%= s.getAge() %></div>
 			<a href="updateform.jsp?id=<%= s.getId()%>">수정 </a>
-			<a href="delete.jsp?id=<%= s.getId()%>">삭제 </a> 		
+			<a href="delete_ok.jsp?id=<%= s.getId()%>">삭제 </a> 		
 		</li>
 		<%
 	}

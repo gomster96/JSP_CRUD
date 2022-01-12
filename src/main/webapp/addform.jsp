@@ -3,6 +3,7 @@
 <%@ page import = "member.Student" %>
 <%@ page import = "member.StudentDAO" %>
 <%@ page import="java.util.*"%>
+<% request.setCharacterEncoding("UTF-8"); %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,7 +14,7 @@
 <body>
 
 	<h1>Add Form</h1>
-	<form action="add_ok.jsp" method="post">
+	<form action="add_ok.jsp" method="post" accept-charset="utf-8" >
 		<div> 이름 </div>
 		<input type="text" name="name" placeholder="이름을 입력해주세요."/>
 		<div> 학번 </div>

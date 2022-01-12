@@ -3,6 +3,7 @@
 <%@ page import = "member.Student" %>
 <%@ page import = "member.StudentDAO" %>
 <%@ page import="java.util.*"%>
+<% request.setCharacterEncoding("UTF-8"); %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,7 +16,7 @@
 		Student s = StudentDAO.findById(id); 
 	%>
 	<h1>Edit Form</h1>
-	<form action="update_ok.jsp" method="post">
+	<form action="update_ok.jsp" method="post" accept-charset="utf-8">
 		<input type="hidden" name="id" value="<%= s.getId() %>"/>
 		<div> 이름 </div>
 		<input type="text" name="name" value="<%= s.getName() %>"/>
