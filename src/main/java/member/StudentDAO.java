@@ -93,5 +93,33 @@ public class StudentDAO {
 		}
 		return new Student();
 	}
+	public static int update(Student student) {
+		String SQL = "UPDATE student SET name=?, student_number=?, age=? WHERE id=?";
+		try {
+			pstmt = getConnection().prepareStatement(SQL);
+			pstmt.setString(1, student.getName());
+			pstmt.setInt(2, student.getNumber());
+			pstmt.setInt(3, student.getAge());
+			pstmt.setInt(4, student.getId());
+			
+			return pstmt.executeUpdate();
+			
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+		return -2; //DB 오류
+	}
 	
+	public static int delete(int id) {
+		String SQL = "DELETE from student where id=?";
+		try {
+			pstmt = getConnection().prepareStatement(SQL);
+			pstmt.setInt(1, id);
+			return pstmt.executeUpdate();
+			
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+		return -2; //DB 오류
+	}
 }
