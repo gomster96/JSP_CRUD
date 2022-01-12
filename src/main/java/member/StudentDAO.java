@@ -14,7 +14,7 @@ public class StudentDAO {
 			try {
 				String dbURL = "jdbc:mysql://localhost:3306/student";
 				String dbID = "root";
-				String dbPassword = "quddnd24";
+				String dbPassword = "비밀번호입력";
 				Class.forName("com.mysql.jdbc.Driver");
 				conn = DriverManager.getConnection(dbURL, dbID, dbPassword);
 			} catch(Exception e) {
