@@ -8,19 +8,6 @@ public class StudentDAO {
 	private static Connection conn = null;
 	private static PreparedStatement pstmt;
 	private static ResultSet rs;
-//	private static ArrayList<Student> list;
-	
-//	public StudentDAO() {
-//		try {
-//			String dbURL = "jdbc:mysql://localhost:3306/student";
-//			String dbID = "root";
-//			String dbPassword = "quddnd24";
-//			Class.forName("com.mysql.jdbc.Driver");
-//			conn = DriverManager.getConnection(dbURL, dbID, dbPassword);
-//		} catch(Exception e) {
-//			e.printStackTrace();
-//		}
-//	}
 	
 	public static Connection getConnection() {
 		if(conn == null) {
